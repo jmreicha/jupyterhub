@@ -35,7 +35,7 @@ RUN apt-get -y update && \
 ENV LANG C.UTF-8
 
 # install Python + NodeJS with conda
-RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-4.5.11-Linux-x86_64.sh -O /tmp/miniconda.sh  && \
+RUN wget -q https://repo.continuum.io/miniconda/Miniconda3-4.5.11-Linux-armv7l.sh -O /tmp/miniconda.sh  && \
     echo 'e1045ee415162f944b6aebfe560b8fee */tmp/miniconda.sh' | md5sum -c - && \
     bash /tmp/miniconda.sh -f -b -p /opt/conda && \
     /opt/conda/bin/conda install --yes -c conda-forge \
