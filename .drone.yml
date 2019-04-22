@@ -1,0 +1,19 @@
+---
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: arm64
+
+steps:
+- name: publish_image
+  image: plugins/docker
+  settings:
+    repo: jmreicha/jupyterhub
+    tags: master
+    dockerfile: Dockerfile
+    username:
+      from_secret: DH_USER
+    password:
+      from_secret: DH_PASS
