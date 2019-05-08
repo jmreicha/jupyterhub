@@ -34,7 +34,7 @@ RUN apt-get -y update && \
     rm -rf /var/lib/apt/lists/*
 ENV LANG C.UTF-8
 
-# install Python + NodeJS with conda
+# install Python + NodeJS with Conda
 RUN wget -q https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh -O /tmp/miniconda.sh && \
     bash /tmp/miniconda.sh -f -b -p /opt/conda && \
     /opt/conda/bin/conda install --yes -c conda-forge \
